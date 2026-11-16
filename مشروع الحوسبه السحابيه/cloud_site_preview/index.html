@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="منصة الحوسبة السحابية الذكية - مشروع عمار ياسر الفهيد">
+<title>منصة الحوسبة السحابية الذكية | عمار ياسر الفهيد</title>
+<style>
+:root{--bg:#071426;--panel:#10243d;--panel2:#0c1c31;--cyan:#48d7f2;--blue:#3985ff;--text:#edf6ff;--muted:#a9bdd2;--line:#25415f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#12395b 0,transparent 30%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.9}
+a{color:var(--cyan);text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}.nav{position:sticky;top:0;z-index:5;background:#071426eF;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.navin{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 0}.brand{font-weight:800;color:white}.links{display:flex;gap:15px;flex-wrap:wrap;font-size:13px}.hero{padding:78px 0 55px;display:grid;grid-template-columns:1.35fr .65fr;gap:28px;align-items:center}.eyebrow{color:var(--cyan);font-weight:bold}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.25;margin:12px 0}.hero p{color:var(--muted);font-size:18px;max-width:720px}.chip{display:inline-block;border:1px solid #286080;background:#0d2c45;padding:6px 12px;border-radius:30px;margin:4px;font-size:13px}.orb{height:260px;border:1px solid #286080;border-radius:28px;background:linear-gradient(145deg,#123b5b,#0b1b30);display:grid;place-items:center;position:relative;overflow:hidden}.orb:before,.orb:after{content:"";position:absolute;border:1px solid #48d7f255;border-radius:50%;width:210px;height:210px}.orb:after{width:150px;height:150px}.cloud{font-size:82px;z-index:1;filter:drop-shadow(0 0 20px #48d7f2)}section{padding:48px 0;border-top:1px solid #1b3550}.head{margin-bottom:24px}.head small{color:var(--cyan)}h2{font-size:30px;margin:5px 0}h3{margin:0 0 10px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(160deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:18px;padding:20px}.card p{color:var(--muted);margin:8px 0}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.tag{font-size:12px;color:var(--cyan)}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:15px}table{width:100%;border-collapse:collapse;min-width:650px;background:#0b1c30}td,th{padding:13px;text-align:right;border-bottom:1px solid var(--line)}th{color:var(--cyan);background:#102943}tr:last-child td{border:0}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.step{padding:15px;background:#10243d;border:1px solid var(--line);border-radius:14px;text-align:center}.media{border:1px dashed #39718d;border-radius:18px;padding:24px;text-align:center;background:#0b2035}.media strong{display:block;color:var(--cyan);font-size:20px}.architecture{background:#081a2c;border:1px solid var(--line);padding:18px;border-radius:18px;overflow:auto}.architecture svg{min-width:700px;width:100%;height:auto}.chatbox{max-width:650px}.chatlog{height:190px;overflow:auto;background:#081a2c;border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:10px}.msg{padding:8px 11px;border-radius:12px;margin:7px 0;background:#173653}.msg.user{background:#12445a}.chatrow{display:flex;gap:8px}.chatrow input{flex:1;min-width:0;background:#081a2c;border:1px solid var(--line);border-radius:10px;color:white;padding:12px}.btn{display:inline-block;background:linear-gradient(90deg,var(--blue),#16b8d4);color:#031321;border:0;border-radius:10px;padding:11px 18px;font-weight:bold;cursor:pointer}.note{border-right:3px solid var(--cyan);padding:10px 15px;background:#0c2238;color:var(--muted);border-radius:8px}.refs li{margin:9px 0;color:var(--muted)}footer{padding:30px 0;color:var(--muted);border-top:1px solid var(--line);text-align:center}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px}.orb{height:190px}.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.links{display:none}.two{grid-template-columns:1fr}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero h1{font-size:36px}h2{font-size:25px}}
+
+.photo-gallery{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.photo-card{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,var(--panel),var(--panel2))}
+.photo-card img{display:block;width:100%;height:260px;object-fit:cover}
+.photo-card div{padding:14px 17px}.photo-card h3{color:var(--cyan);margin:0 0 5px}
+.podcast{border:1px solid #286080;border-radius:18px;padding:20px;background:linear-gradient(145deg,#102b48,#091b30);text-align:right}
+.podcast-controls{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}
+.podcast-controls button{border:0;border-radius:10px;padding:11px 18px;font-weight:bold;cursor:pointer;background:linear-gradient(90deg,var(--blue),#16b8d4);color:#031321}
+.podcast-controls button.secondary{background:#1a3a58;color:var(--text);border:1px solid #39718d}
+.podcast-status{color:var(--cyan);font-size:13px;min-height:25px}
+.podcast-transcript{max-height:260px;overflow:auto;background:#081a2c;border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:12px}
+.podcast-transcript p{margin:8px 0;color:var(--muted)}
+.podcast-transcript b{color:var(--cyan)}
+@media(max-width:700px){.photo-gallery{grid-template-columns:1fr}.photo-card img{height:220px}}
+</style></head>
+<body>
+<div class="nav"><div class="wrap navin"><div class="brand">☁ CLOUD PORTFOLIO</div><div class="links"><a href="#research">البحث</a><a href="#models">الأنواع والخدمات</a><a href="#providers">المزودون</a><a href="#media">الوسائط</a><a href="#architecture">الهندسة</a><a href="#assistant">المساعد</a></div></div></div>
+<header class="wrap hero"><div><span class="eyebrow">AI-POWERED CLOUD COMPUTING PORTFOLIO</span><h1>منصة الحوسبة<br><span style="color:var(--cyan)">السحابية الذكية</span></h1><p>رحلة معرفية وتقنية لفهم الحوسبة السحابية، نماذج خدماتها، مزوديها، وبناء بنية سحابية عملية تدعم التحول الرقمي.</p><div><span class="chip">إعداد: عمار ياسر الفهيد</span><span class="chip">إدارة أنظمة شبكات</span><span class="chip">رؤية السعودية 2030</span></div></div><div class="orb"><div class="cloud">☁</div></div></header>
+<main class="wrap">
+<section id="research"><div class="head"><small>01 / KNOWLEDGE BASE</small><h2>البحث المعرفي</h2><p class="muted">محتوى علمي منظم يشرح المفاهيم الأساسية للحوسبة السحابية وتطبيقاتها.</p></div>
+<div class="card"><h3>ما الحوسبة السحابية؟</h3><p>الحوسبة السحابية هي نموذج يتيح الوصول عبر الشبكة، عند الطلب، إلى مجموعة مشتركة من موارد الحوسبة القابلة للتهيئة مثل الخوادم والتخزين والشبكات والتطبيقات، مع إمكانية توفيرها أو تحريرها بسرعة وبجهد إداري محدود. وبدل شراء البنية التحتية وتشغيلها محليًا، تستطيع المؤسسة استخدام الموارد كخدمات حسب الحاجة.</p><p class="tag">الفكرة الأساسية: موارد تقنية مرنة عند الطلب، مع قياس الاستخدام وإدارته.</p></div>
+<div class="grid" style="margin-top:15px">
+<div class="card"><h3>المرونة والتوسع</h3><p>زيادة أو تقليل الموارد حسب تغير الطلب، دون الحاجة إلى شراء خوادم جديدة لكل توسع.</p></div>
+<div class="card"><h3>خفض الاستثمار الأولي</h3><p>تقليل الحاجة إلى شراء الأجهزة وتجهيز مراكز البيانات وصيانتها داخليًا، مع ضرورة مراقبة تكاليف الاستخدام.</p></div>
+<div class="card"><h3>سرعة الابتكار</h3><p>إتاحة بيئات تطوير واختبار وخدمات جاهزة تساعد الفرق على إطلاق الحلول بسرعة أكبر.</p></div>
+</div><div class="note" style="margin-top:16px">ملاحظة علمية: الحوسبة السحابية لا تعني أن الأمن مضمون تلقائيًا أو أن التكلفة أقل دائمًا؛ فالنتيجة تعتمد على التصميم والحوكمة وإدارة الهوية والتكاليف.</div>
+</section>
+<section id="models"><div class="head"><small>02 / DEPLOYMENT & SERVICE MODELS</small><h2>أنواع السحابة ونماذج الخدمات</h2></div>
+<h3>أولًا: نماذج النشر</h3><div class="grid">
+<div class="card"><span class="tag">PUBLIC CLOUD</span><h3>السحابة العامة</h3><p>موارد يقدمها مزود خارجي عبر الإنترنت وتُشارك بنيتها التحتية بين عملاء متعددين مع عزل منطقي لكل عميل.</p></div>
+<div class="card"><span class="tag">PRIVATE CLOUD</span><h3>السحابة الخاصة</h3><p>بيئة مخصصة لمؤسسة واحدة، تمنحها تحكمًا أكبر في الموارد والسياسات، لكنها قد تتطلب مسؤولية تشغيلية وتكلفة أعلى.</p></div>
+<div class="card"><span class="tag">HYBRID CLOUD</span><h3>السحابة الهجينة</h3><p>دمج بيئة خاصة أو محلية مع خدمات سحابة عامة، مع تكامل واتصال منظم بين البيئتين.</p></div>
+<div class="card"><span class="tag">MULTICLOUD</span><h3>السحابة المتعددة</h3><p>استخدام خدمات من مزودين سحابيين عامين أو أكثر، لأسباب مثل تنويع الخدمات أو المرونة أو متطلبات العمل.</p></div>
+</div>
+<h3 style="margin-top:28px">ثانيًا: نماذج تقديم الخدمة</h3><div class="tablewrap"><table><thead><tr><th>النموذج</th><th>ما الذي يقدمه؟</th><th>مسؤولية العميل غالبًا</th><th>مثال توضيحي</th></tr></thead><tbody>
+<tr><td><b>IaaS</b><br>البنية التحتية كخدمة</td><td>خوادم افتراضية وتخزين وشبكات</td><td>نظام التشغيل والتطبيقات والبيانات وإعدادات الشبكة</td><td>آلة افتراضية على Azure أو AWS</td></tr>
+<tr><td><b>PaaS</b><br>المنصة كخدمة</td><td>بيئة جاهزة لتطوير التطبيقات وتشغيلها</td><td>كود التطبيق والبيانات وإعدادات التطبيق</td><td>منصة تطبيقات مُدارة</td></tr>
+<tr><td><b>SaaS</b><br>البرمجيات كخدمة</td><td>برنامج جاهز يصل إليه المستخدم عبر الإنترنت</td><td>إدارة الحسابات والبيانات والاستخدام</td><td>Microsoft 365</td></tr>
+</tbody></table></div>
+<p class="muted">كلما انتقلنا من IaaS إلى SaaS زادت مسؤولية مزود الخدمة عن إدارة طبقات التقنية، وقلت الحاجة إلى إدارة العميل للبنية الأساسية.</p>
+</section>
+<section id="providers"><div class="head"><small>03 / CLOUD PROVIDERS</small><h2>مقارنة مزودي الخدمات السحابية</h2><p class="muted">مقارنة وصفية تساعد على فهم موقع كل مزود، وليست ترتيبًا مطلقًا للأفضلية.</p></div>
+<div class="tablewrap"><table><thead><tr><th>المزود</th><th>نقاط قوة عامة</th><th>اعتبارات عند الاختيار</th></tr></thead><tbody>
+<tr><td><b>AWS</b></td><td>محفظة واسعة من خدمات الحوسبة والتخزين وقواعد البيانات والشبكات والتحليلات.</td><td>تنوع الخدمات يتطلب حوكمة جيدة للتكلفة والهوية والتصميم.</td></tr>
+<tr><td><b>Microsoft Azure</b></td><td>تكامل قوي مع منظومة Microsoft وخدمات المؤسسات والهوية والهجين.</td><td>اختيار الخدمات يعتمد على بيئة المؤسسة وترخيصها ومهارات الفريق.</td></tr>
+<tr><td><b>Google Cloud</b></td><td>قوة في البيانات والتحليلات والذكاء الاصطناعي والبنية السحابية.</td><td>تقييم توافر الخدمات محليًا ومتطلبات التكامل والتكلفة.</td></tr>
+<tr><td><b>stc Cloud</b></td><td>خدمات محلية واستضافة داخل المملكة ومساندة ومواءمة للمتطلبات التنظيمية السعودية.</td><td>مطابقة قائمة الخدمات ومستويات الخدمة والامتثال واحتياجات الحمل الفعلي.</td></tr>
+</tbody></table></div>
+<div class="card" style="margin-top:16px"><h3>السياق السعودي</h3><p>توضح هيئة الاتصالات والفضاء والتقنية وجود مزودي خدمات سحابية ومراكز بيانات داخل المملكة، كما تنشر قياسات لأداء الوصول إلى الخدمات السحابية. ويُعد موقع مركز البيانات وزمن الاستجابة والامتثال عوامل مهمة عند اختيار المزود.</p><p class="tag">لا تُقارن الشركات بالشعارات فقط؛ قارن الخدمات الفعلية، مواقع الاستضافة، التوافر، الأمن، الدعم، والتكلفة.</p></div>
+</section>
+<section id="history"><div class="head"><small>04 / EVOLUTION & FUTURE</small><h2>التطور التاريخي والمستقبلي</h2></div>
+<div class="steps"><div class="step"><b>الحوسبة المركزية</b><br><span class="muted">موارد مركزية ومشاركة عبر أطراف متعددة</span></div><div class="step"><b>المحاكاة الافتراضية</b><br><span class="muted">تشغيل عدة أنظمة افتراضية على الأجهزة</span></div><div class="step"><b>الخدمات السحابية</b><br><span class="muted">توفير موارد حسب الطلب عبر الشبكة</span></div><div class="step"><b>السحابة والذكاء الاصطناعي</b><br><span class="muted">أتمتة وتحليلات وخدمات مُدارة متقدمة</span></div></div>
+<div class="two" style="margin-top:16px"><div class="card"><h3>اتجاهات مستقبلية</h3><p>الحوسبة الطرفية، الحاويات وKubernetes، الخدمات عديمة الخوادم، الذكاء الاصطناعي، الأتمتة، وتحسين كفاءة الطاقة.</p></div><div class="card"><h3>تحديات مستمرة</h3><p>الأمن والخصوصية، الامتثال ومكان البيانات، الاعتماد على المزود، تكاليف نقل البيانات، نقص المهارات، واستمرارية الأعمال.</p></div></div>
+</section>
+<section id="careers"><div class="head"><small>05 / SAUDI DIGITAL CAREERS</small><h2>الفرص الوظيفية والمهارات في السعودية</h2></div>
+<div class="grid">
+<div class="card"><h3>Cloud Administrator</h3><p>إدارة الحسابات والموارد السحابية والمراقبة والنسخ الاحتياطي والتحديثات.</p></div>
+<div class="card"><h3>Cloud Network Engineer</h3><p>تصميم الشبكات الافتراضية وVPN وDNS والجدران النارية والربط بين البيئات.</p></div>
+<div class="card"><h3>Cloud Security Engineer</h3><p>إدارة الهوية والصلاحيات والتشفير والسياسات ومراقبة التهديدات.</p></div>
+<div class="card"><h3>Cloud Architect</h3><p>تصميم الحلول السحابية وموازنة الأداء والتكلفة والأمان والتوافر.</p></div>
+<div class="card"><h3>DevOps / Platform Engineer</h3><p>الأتمتة وخطوط CI/CD والحاويات والبنية التحتية ككود.</p></div>
+<div class="card"><h3>Cloud Support Specialist</h3><p>تشخيص الأعطال ومتابعة الحوادث ودعم المستخدمين والخدمات.</p></div>
+</div>
+<div class="card" style="margin-top:16px"><h3>مهارات مقترحة للمتدرب في إدارة أنظمة الشبكات</h3><p>أساسيات TCP/IP وDNS وDHCP وVPN، Linux وWindows Server، الافتراضية، الشبكات السحابية، IAM، أساسيات الأمن السيبراني، PowerShell أو Python، المراقبة، النسخ الاحتياطي، وقراءة التكاليف.</p><p><b>شهادات يمكن دراستها تدريجيًا:</b> AWS Certified Cloud Practitioner، Microsoft Azure Fundamentals (AZ-900)، Google Cloud Digital Leader، ثم شهادات إدارية أو معمارية متقدمة بحسب المسار.</p></div>
+<div class="note" style="margin-top:16px">ارتباط رؤية 2030: تتوافق الحوسبة السحابية مع مسار التحول الرقمي ورفع كفاءة الخدمات الحكومية والاقتصاد الرقمي. وتدعم سياسة Cloud First إعطاء الحلول السحابية أولوية عند دراسة الاستثمارات التقنية الحكومية، وفق الضوابط المعتمدة.</div>
+</section>
+<section id="media"><div class="head"><small>06 / MEDIA & VISUALS</small><h2>مركز الوسائط المتعددة</h2><p class="muted">شاهد الفيديو التعريفي بالمشروع، واستمع إلى البودكاست التقني.</p></div>
+<div class="two"><div class="media"><strong>🎥 الفيديو التعريفي الشخصي</strong><p>منصة الحوسبة السحابية الذكية — عمار ياسر الفهيد</p><video controls playsinline preload="metadata" style="width:100%;max-height:440px;border-radius:14px;background:#000;margin-top:12px"><source src="media/intro-video.mp4" type="video/mp4">عذرًا، متصفحك لا يدعم تشغيل الفيديو.</video><p class="muted" style="margin-top:10px">يمكن تشغيل الفيديو مباشرة من داخل الموقع.</p></div>
+<div class="podcast"><strong style="display:block;color:var(--cyan);font-size:20px">🎙 بودكاست: السحابة ببساطة</strong><p>حوار بين شخصين يشرح الحوسبة السحابية والتخزين السحابي وأمثلة من الحياة اليومية.</p>
+<div class="podcast-controls"><button type="button" onclick="startPodcast()">▶ تشغيل الحلقة</button><button type="button" class="secondary" onclick="pausePodcast()">⏸ إيقاف مؤقت</button><button type="button" class="secondary" onclick="stopPodcast()">■ إيقاف</button></div>
+<div id="podcastStatus" class="podcast-status" aria-live="polite">جاهز للاستماع — اضغط تشغيل الحلقة</div>
+<div class="podcast-transcript" id="podcastTranscript">
+<p><b>المذيع الأول:</b> أهلًا بكم! اليوم بنتكلم عن الحوسبة السحابية بطريقة بسيطة.</p>
+<p><b>المذيع الثاني:</b> تخيل أن ملفاتك وبرامجك تقدر توصل لها من أي مكان، من غير ما تكون محفوظة كلها على جهازك.</p>
+<p><b>المذيع الأول:</b> هذا جزء من فكرة السحابة: خوادم ومراكز بيانات تقدم لك موارد عبر الإنترنت عند الحاجة.</p>
+<p><b>المذيع الثاني:</b> والتخزين السحابي يعني حفظ الصور والملفات والنسخ الاحتياطية على خوادم بعيدة، مع إمكانية الوصول لها من أجهزتك.</p>
+<p><b>المذيع الأول:</b> ومن أمثلته Google Drive وOneDrive. أما خدمات الحوسبة السحابية فتشمل أيضًا تشغيل التطبيقات وقواعد البيانات والخوادم.</p>
+<p><b>المذيع الثاني:</b> عندنا ثلاثة نماذج مشهورة: IaaS للبنية التحتية، وPaaS للمنصات، وSaaS للبرامج الجاهزة.</p>
+<p><b>المذيع الأول:</b> ومن أهم الفوائد المرونة وسرعة التوسع وتقليل شراء الأجهزة مقدمًا، لكن لازم ننتبه للأمان وإدارة الصلاحيات والتكلفة.</p>
+<p><b>المذيع الثاني:</b> صحيح، اختَر مزودًا موثوقًا، فعّل المصادقة متعددة العوامل، واحتفظ بنسخ احتياطية مهمة.</p>
+<p><b>المذيع الأول:</b> الخلاصة: السحابة تخلي التقنية أقرب وأسهل في الوصول، إذا استخدمناها بتخطيط وأمان.</p>
+<p><b>المذيعان:</b> شكرًا لاستماعكم، ونلقاكم في حلقة قادمة!</p>
+</div></div></div>
+<div class="photo-gallery">
+<div class="photo-card"><img src="media/cloud-data-center.png" alt="مركز بيانات حديث وخوادم الحوسبة السحابية"><div><h3>مراكز البيانات والحوسبة السحابية</h3><p class="muted">خوادم مترابطة توفر المعالجة والتطبيقات والخدمات السحابية.</p></div></div>
+<div class="photo-card"><img src="media/cloud-storage-workspace.png" alt="التخزين السحابي ومزامنة الملفات بين الأجهزة"><div><h3>التخزين السحابي ومزامنة الملفات</h3><p class="muted">حفظ الملفات والوصول إليها ومزامنتها بين الحاسوب والهاتف.</p></div></div>
+</div>
+<div class="card" style="margin-top:16px"><h3>ملخص الإنفوجرافيك</h3><div class="grid"><div><b>AWS</b><p class="muted">تنوع واسع في الخدمات السحابية.</p></div><div><b>Azure</b><p class="muted">تكامل مع بيئات Microsoft والمؤسسات.</p></div><div><b>Google Cloud</b><p class="muted">بيانات وتحليلات وذكاء اصطناعي.</p></div></div><p class="tag">IaaS = بنية تحتية | PaaS = منصة | SaaS = برنامج جاهز</p></div>
+</section>
+<section id="architecture"><div class="head"><small>07 / ARCHITECTURE & AI LAB</small><h2>مخطط البنية المعمارية السحابية</h2><p class="muted">نموذج تطبيق ويب ثلاثي الطبقات مع ربط آمن ببيئة محلية عند الحاجة.</p></div>
+<div class="architecture"><svg viewBox="0 0 900 440" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="#48d7f2"/></marker></defs>
+<g fill="#102d49" stroke="#48d7f2" stroke-width="2">
+<rect x="350" y="15" width="200" height="55" rx="12"/><rect x="350" y="110" width="200" height="55" rx="12"/><rect x="350" y="205" width="200" height="55" rx="12"/>
+<rect x="70" y="310" width="200" height="65" rx="12"/><rect x="350" y="310" width="200" height="65" rx="12"/><rect x="630" y="310" width="200" height="65" rx="12"/>
+</g>
+<g fill="#edf6ff" font-size="17" text-anchor="middle" font-family="Tahoma,Arial"><text x="450" y="48">المستخدمون / الإنترنت</text><text x="450" y="143">DNS + WAF</text><text x="450" y="238">موازن الأحمال</text><text x="170" y="338">طبقة التطبيق</text><text x="170" y="360" font-size="13">خوادم ويب / API</text><text x="450" y="338">طبقة البيانات</text><text x="450" y="360" font-size="13">قاعدة بيانات + نسخ احتياطي</text><text x="730" y="338">المراقبة والأمن</text><text x="730" y="360" font-size="13">Logs / IAM / Alerts</text></g>
+<g stroke="#48d7f2" stroke-width="2.5" fill="none" marker-end="url(#arr)"><path d="M450 70 V108"/><path d="M450 165 V203"/><path d="M450 260 V285 H170 V308"/><path d="M450 260 V308"/><path d="M450 260 V285 H730 V308"/><path d="M270 342 H348"/><path d="M550 342 H628"/></g>
+</svg></div>
+<div class="two" style="margin-top:15px"><div class="card"><h3>مسار الطلب</h3><p>يصل المستخدم إلى اسم النطاق، ثم تمر الحركة عبر DNS وجدار حماية تطبيقات الويب، وبعدها يوزع موازن الأحمال الطلبات على خوادم التطبيق.</p></div><div class="card"><h3>الحماية والاستمرارية</h3><p>تُطبق إدارة الهوية والصلاحيات، والتشفير، والمراقبة والتنبيهات، والنسخ الاحتياطي واختبار الاستعادة. تُعزل قاعدة البيانات عن الوصول العام.</p></div></div>
+</section>
+<section id="assistant"><div class="head"><small>08 / AI CLOUD ADVISOR</small><h2>المساعد الذكي للحوسبة السحابية</h2><p class="muted">نسخة تجريبية محلية مبنية على أسئلة وأجوبة المشروع. يمكن لاحقًا ربطها بمساعد Coze أو GPT مع قاعدة معرفة ومراجع.</p></div>
+<div class="card chatbox"><div id="log" class="chatlog"><div class="msg">مرحبًا! أنا مستشارك السحابي التجريبي. اسألني عن IaaS أو PaaS أو SaaS أو أنواع السحابة.</div></div><div class="chatrow"><input id="q" placeholder="اكتب سؤالك هنا..." onkeydown="if(event.key==='Enter')ask()"><button class="btn" onclick="ask()">إرسال</button></div></div>
+</section>
+<section id="references"><div class="head"><small>09 / REFERENCES</small><h2>المراجع العلمية</h2><p class="muted">روابط مرجعية أولية اعتمد عليها إعداد المحتوى، ويجب مراجعتها وتوثيق تاريخ الاطلاع عند التسليم.</p></div>
+<ol class="refs">
+<li>National Institute of Standards and Technology (NIST), The NIST Definition of Cloud Computing, SP 800-145: <a href="https://csrc.nist.gov/pubs/sp/800/145/final" target="_blank">الرابط الرسمي</a>.</li>
+<li>هيئة الاتصالات والفضاء والتقنية، مفهوم الحوسبة السحابية: <a href="https://www.cst.gov.sa/en/knowledge-center/digital-knowledge/cloud-computing" target="_blank">CST</a>.</li>
+<li>البوابة الوطنية السعودية، سياسة Cloud First: <a href="https://my.gov.sa/en/content/164" target="_blank">National Portal</a>.</li>
+<li>هيئة الاتصالات والفضاء والتقنية، تقرير أداء الوصول لخدمات الحوسبة السحابية 2026: <a href="https://www.cst.gov.sa/en/knowledge-center/reports/cloud-services-latency-performance-report-2026" target="_blank">CST Report</a>.</li>
+<li>stc Cloud، معلومات الخدمات ومراكز البيانات: <a href="https://cloud.stc.com.sa/" target="_blank">الموقع الرسمي</a>.</li>
+<li>وزارة الموارد البشرية والتنمية الاجتماعية، Digital Sector Skills Intro Report: <a href="https://www.hrsd.gov.sa/sites/default/files/2025-02/Digital%20Sector%20Skills%20Intro%20Report_EN.pdf" target="_blank">تقرير المهارات الرقمية</a>.</li>
+<li>Google Cloud، What is Cloud Computing?: <a href="https://cloud.google.com/learn/what-is-cloud-computing" target="_blank">Google Cloud</a>.</li>
+</ol>
+</section>
+</main>
+<footer><div class="wrap">إعداد المتدرب: عمار ياسر الفهيد · إدارة أنظمة شبكات · مشروع الحوسبة السحابية الذكية</div></footer>
+<script>
+function ask(){const i=document.getElementById('q'),v=i.value.trim();if(!v)return;const l=document.getElementById('log');l.innerHTML+='<div class="msg user"></div>';l.lastChild.textContent=v;let a='أستطيع مساعدتك في مفاهيم الحوسبة السحابية. جرّب السؤال عن نماذج النشر أو IaaS أو PaaS أو SaaS أو الأمان.';const s=v.toLowerCase();
+if(s.includes('iaas'))a='IaaS هي البنية التحتية كخدمة: تحصل على موارد مثل الخوادم الافتراضية والتخزين والشبكات، وتدير غالبًا نظام التشغيل والتطبيقات والبيانات.';
+else if(s.includes('paas'))a='PaaS هي المنصة كخدمة: يوفر المزود بيئة مُدارة لتطوير التطبيقات ونشرها، فيركز المطور على الكود والبيانات بدل إدارة الخوادم الأساسية.';
+else if(s.includes('saas'))a='SaaS هي البرمجيات كخدمة: تطبيق جاهز يُستخدم عبر الإنترنت، بينما يدير المزود معظم البنية والتحديثات والتشغيل.';
+else if(s.includes('هجينة')||s.includes('hybrid'))a='السحابة الهجينة تجمع بين بيئة خاصة أو محلية وسحابة عامة، مع اتصال وتكامل بينهما.';
+else if(s.includes('متعددة')||s.includes('multi'))a='السحابة المتعددة تعني استخدام خدمات من مزودين سحابيين مختلفين، وقد تساعد على تنويع الخيارات لكنها تزيد تعقيد الإدارة.';
+else if(s.includes('امن')||s.includes('أمن')||s.includes('security'))a='أهم الممارسات: إدارة الهوية بأقل صلاحية، المصادقة متعددة العوامل، التشفير، تقسيم الشبكات، التسجيل والمراقبة، النسخ الاحتياطي واختبار الاستعادة.';
+else if(s.includes('stc'))a='stc Cloud مزود محلي يقدم خدمات سحابية داخل المملكة. ينبغي تقييم الخدمات ومواقع الاستضافة والامتثال ومستويات الخدمة وفق احتياج المؤسسة.';
+else if(s.includes('رؤية')||s.includes('2030'))a='تدعم الحوسبة السحابية التحول الرقمي ورفع مرونة الخدمات. سياسة Cloud First توجه الجهات الحكومية إلى إعطاء الحلول السحابية أولوية عند دراسة الاستثمارات التقنية.';
+l.innerHTML+='<div class="msg"></div>';l.lastChild.textContent=a;l.scrollTop=l.scrollHeight;i.value='';}
+
+const podcastTurns = [
+["راشد","أهلًا وسهلًا فيكم في بودكاست السحابة ببساطة. اليوم بنفهم مع بعض شنو المقصود بالحوسبة السحابية، وليش صارت جزءًا من حياتنا اليومية."],
+["نورة","خلني أبدأ بسؤال بسيط: لما أصور صورة بجوالي وأحصلها بعدين على اللابتوب، شلون يصير هذا؟"],
+["راشد","غالبًا عن طريق التخزين السحابي. بدل ما تكون الصورة محفوظة على جهاز واحد فقط، تنرفع إلى خوادم متصلة بالإنترنت، وبعدها تقدر تدخل عليها من أجهزتك حسب إعدادات حسابك."],
+["نورة","يعني مثل Google Drive وOneDrive؟"],
+["راشد","بالضبط. هذي أمثلة على خدمات تخزين ومزامنة الملفات. لكن الحوسبة السحابية أوسع من التخزين؛ تشمل تشغيل الخوادم والتطبيقات وقواعد البيانات وتحليل البيانات وحتى أدوات الذكاء الاصطناعي."],
+["نورة","طيب ليش يسمونها سحابة؟ هل البيانات فعلًا موجودة في مكان غير معروف؟"],
+["راشد","الاسم مجازي. البيانات والبرامج موجودة فعليًا على أجهزة وخوادم داخل مراكز بيانات. كلمة السحابة تصف طريقة الوصول للخدمات عبر الشبكة، مو أنها شيء موجود في الهواء."],
+["نورة","وش الفرق بين التخزين السحابي والحوسبة السحابية؟"],
+["راشد","التخزين السحابي خدمة لحفظ البيانات واسترجاعها. أما الحوسبة السحابية فهي المظلة الأكبر: موارد مثل المعالجة والتخزين والشبكات والمنصات والبرامج، وتُتاح عند الطلب."],
+["نورة","سمعت عن IaaS وPaaS وSaaS. هذي أسماء معقدة شوي!"],
+["راشد","خلينا نبسطها. IaaS يعني البنية التحتية كخدمة: تستأجر خادمًا افتراضيًا وتدير نظام التشغيل والتطبيقات. PaaS يعني منصة كخدمة: تحصل على بيئة جاهزة تساعدك تطور وتشغل تطبيقك. SaaS يعني برنامج كخدمة: تستخدم تطبيقًا جاهزًا عبر الإنترنت."],
+["نورة","مثل البريد الإلكتروني أو برامج تحرير المستندات على الإنترنت، هذي غالبًا SaaS؟"],
+["راشد","صحيح. المستخدم يستعمل البرنامج، ومزود الخدمة يدير معظم البنية التقنية خلفه."],
+["نورة","وش أهم فوائد الحوسبة السحابية؟"],
+["راشد","المرونة، وسرعة توفير الموارد، والوصول من أماكن مختلفة، وتقليل الحاجة لشراء خوادم من البداية. لكن مو معناها أنها دائمًا أرخص؛ لازم تراقب الاستهلاك والفواتير."],
+["نورة","والأمان؟ إذا ملفاتي على الإنترنت، شلون أحميها؟"],
+["راشد","استخدم كلمة مرور قوية ومختلفة، وفعّل المصادقة متعددة العوامل، وحدد من يقدر يشوف الملفات أو يعدلها، ولا تعتمد على المزامنة وحدها كنسخة احتياطية. احتفظ بنسخ مستقلة للملفات المهمة."],
+["نورة","وهل الشركات تقدر تختار وين تخزن بياناتها؟"],
+["راشد","يعتمد على المزود والخدمة والمنطقة المتاحة والعقود والأنظمة المطبقة. المؤسسات لازم تراجع موقع البيانات ومتطلبات الخصوصية والامتثال قبل الاختيار."],
+["نورة","الحين وضحت الصورة. التخزين السحابي جزء من الحوسبة السحابية، لكنه مو كل الحوسبة السحابية."],
+["راشد","بالضبط. إذا تذكرون نقطة وحدة من حلقتنا: السحابة موارد تقنية حقيقية في مراكز بيانات، نوصل لها عبر الشبكة ونستخدمها حسب حاجتنا."],
+["نورة","شكرًا لكم على الاستماع. نتمنى تكون الحلقة وضحت لكم الفكرة بطريقة سهلة."],
+["راشد","كان معكم راشد ونورة في بودكاست السحابة ببساطة. إلى اللقاء!"]
+];
+let podcastIndex=0, podcastSpeaking=false, podcastVoices=[];
+function loadPodcastVoices(){ if(!('speechSynthesis' in window)) return; podcastVoices=window.speechSynthesis.getVoices(); }
+if('speechSynthesis' in window){loadPodcastVoices();window.speechSynthesis.onvoiceschanged=loadPodcastVoices;}
+function chooseArabicVoice(offset){
+ const ar=podcastVoices.filter(v=>/^ar([-_]|$)/i.test(v.lang));
+ return ar.length ? ar[offset % ar.length] : (podcastVoices.find(v=>/^ar/i.test(v.lang)) || null);
+}
+function speakPodcastTurn(){
+ if(!podcastSpeaking) return;
+ if(podcastIndex>=podcastTurns.length){podcastSpeaking=false;document.getElementById('podcastStatus').textContent='انتهت الحلقة. شكرًا لاستماعكم!';return;}
+ const [speaker,words]=podcastTurns[podcastIndex];
+ document.getElementById('podcastStatus').textContent='المتحدث الآن: '+speaker+' — '+(podcastIndex+1)+' من '+podcastTurns.length;
+ const utterance=new SpeechSynthesisUtterance(words);
+ utterance.lang='ar-SA'; utterance.rate=0.94; utterance.pitch=speaker==='راشد'?0.88:1.12;
+ const voice=chooseArabicVoice(speaker==='راشد'?0:1); if(voice) utterance.voice=voice;
+ utterance.onend=()=>{podcastIndex++; if(podcastSpeaking) speakPodcastTurn();};
+ utterance.onerror=()=>{podcastSpeaking=false;document.getElementById('podcastStatus').textContent='تعذر تشغيل الصوت. جرّب متصفحًا يدعم النطق العربي.';};
+ window.speechSynthesis.speak(utterance);
+}
+function startPodcast(){
+ if(!('speechSynthesis' in window)){document.getElementById('podcastStatus').textContent='متصفحك لا يدعم تشغيل النطق الصوتي.';return;}
+ if(window.speechSynthesis.paused){window.speechSynthesis.resume();podcastSpeaking=true;document.getElementById('podcastStatus').textContent='تم استئناف الحلقة';return;}
+ if(window.speechSynthesis.speaking){podcastSpeaking=true;return;}
+ if(podcastIndex>=podcastTurns.length) podcastIndex=0;
+ podcastSpeaking=true; speakPodcastTurn();
+}
+function pausePodcast(){if('speechSynthesis' in window){window.speechSynthesis.pause();podcastSpeaking=false;document.getElementById('podcastStatus').textContent='الحلقة متوقفة مؤقتًا';}}
+function stopPodcast(){if('speechSynthesis' in window)window.speechSynthesis.cancel();podcastSpeaking=false;podcastIndex=0;document.getElementById('podcastStatus').textContent='تم إيقاف الحلقة — اضغط تشغيل للبدء من جديد';}
+</script></body></html>
